@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islas</title>
+    <link rel="stylesheet" href="/style/slider.css">
+</head>
+<body>
+    <label for="islas">Introduce una ubicación:</label>
+    <input type="text" id="urlInput" placeholder="Introduce la URL de la ubicación">
+    <button onclick="resetearCampo()">Resetear</button>
+
+    <h1>Ubicaciones en </h1>
+    <ul id="ubicaciones"></ul>
+    
+    <div class="slider">
+        <div class="list">
+            <div class="item">
+                <div id="titulo"></div>
+                <div id="sliderImages"></div>
+                <div id="subtitulo"></div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+
+    <script src="/scripts/Cercanas.js"></script>
+    <script src="/scripts/lectura.js"></script>
+    <!-- <script src="/scripts/slider.js"></script> -->
+    <script>
+         function resetearCampo() {
+            document.getElementById('urlInput').value = ''; 
+        }
+    </script>
+</body>
+</html>
